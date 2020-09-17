@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Lock</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="./src/scripts/index.js"></script>
+</head>
+<body>
+    <div class="numLockContainer">
+        <div class="keyDots">
+            <span id="dot1"></span>
+            <span id="dot2"></span>
+            <span id="dot3"></span>
+            <span id="dot4"></span> 
+        </div>
+        <div class="keys">
+            <button value="1" onclick="getInput(this)">1</button>
+            <button value="2" onclick="getInput(this)">2</button>
+            <button value="3" onclick="getInput(this)">3</button>
+            <button value="4" onclick="getInput(this)">4</button>
+            <button value="5" onclick="getInput(this)">5</button>
+            <button value="6" onclick="getInput(this)">6</button>
+            <button value="7" onclick="getInput(this)">7</button>
+            <button value="8" onclick="getInput(this)">8</button>
+            <button value="9" onclick="getInput(this)">9</button>
+            <button value="0" id="zero" onclick="getInput(this)">0</button>
+            <button value="-1" id="erase" onclick="getInput(this)">&#8249;</button>
+        </div>
+    </div>
+</body>
+</html>

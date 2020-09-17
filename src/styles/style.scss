@@ -1,0 +1,67 @@
+@import './functions';
+
+
+body {
+    @include flexCenter(row);
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/porsche\(blur\).jpg'); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.numLockContainer {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 500px;
+    background-color: rgba(0,0,0,.7);
+    padding: 32px;
+    border-radius: 32px;
+    .keyDots {
+        display: flex;
+        justify-content: space-around;
+        span {
+            height: 42px;
+            width: 42px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.3);
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+    .keys {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 42px;
+        flex: 1;
+        margin-top: 45px;
+        #zero {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        button {
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(255, 178, 121, 0.5);
+            &:hover {
+                background-color: rgb(211, 121, 0);
+            }
+            #erase {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.notActive {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.activeDot {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
